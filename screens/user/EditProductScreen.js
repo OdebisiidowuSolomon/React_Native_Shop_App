@@ -102,9 +102,7 @@ const EditProductScreen = (props) => {
         await dispatch(createProduct(title, description, imageUrl, +price));
       }
       props.navigation.goBack();
-      console.log("Submitting....");
     } catch (error) {
-      console.log(error);
       setError(error.message);
     }
     setIsLoading(false);
